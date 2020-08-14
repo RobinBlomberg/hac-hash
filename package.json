@@ -1,7 +1,8 @@
 {
   "name": "hac-hash",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "HiQ Ace Creative",
+  "main": "./dist/src/index.js",
   "scripts": {
     "dev": "tsc-watch --onSuccess \"node ./dist/index.js\"",
     "start": "tsc && node ./dist/index.js",

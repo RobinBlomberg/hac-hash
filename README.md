@@ -1,4 +1,12 @@
-# HiQ Ace Creative Hash
+# HAC Hash
+
+## Installation
+
+```
+npm install https://bitbucket.org/nkpgSaberRiders/hac-hash
+```
+
+## Usage
 
 ```javascript
 import * as Hash from 'hac-hash'
