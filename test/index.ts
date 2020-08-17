@@ -3,14 +3,14 @@ import { strictEqual } from 'assert'
 
 ;(async() => {
   const password = 'foobar'
-  const hash = await Hash.generateHash(password)
-  
+  const hash = await Hash.generate(password)
+
   strictEqual(
-    await Hash.verifyHash(password, hash),
+    await Hash.verify(password, hash),
     true
   )
   strictEqual(
-    await Hash.verifyHash('fooBar', hash),
+    await Hash.verify('fooBar', hash),
     false
   )
 

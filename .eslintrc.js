@@ -327,7 +327,7 @@ module.exports = {
     'rest-spread-spacing': ['warn', 'never'],
     semi: ['warn', 'never'],
     'semi-spacing': ['warn', { after: true, before: false }],
-    'semi-style': 'warn',
+    'semi-style': ['warn', 'first'],
     'sort-imports': ['warn', {
       ignoreCase: false,
       ignoreDeclarationSort: false,
