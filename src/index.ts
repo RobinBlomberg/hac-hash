@@ -6,7 +6,9 @@ const ITERATIONS = 2048
 const KEY_LENGTH = 32
 const SALT_LENGTH = 16
 
-export const generateHash = (
+export type { HashOptions }
+
+export const generate = (
   password: string,
   salt = crypto.randomBytes(SALT_LENGTH).toString('hex'),
   {
@@ -34,13 +36,13 @@ export const generateHash = (
   })
 }
 
-export const verifyHash = async(
+export const verify = async(
   password: string,
   hash: string,
   options?: HashOptions
 ) => {
   const [salt, oldHashPart] = hash.split('$')
-  const newHash = await generateHash(password, salt, options)
+  const newHash = await generate(password, salt, options)
   const newHashPart = newHash.split('$')[1]
   return newHashPart === oldHashPart
 }
