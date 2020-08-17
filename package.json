@@ -18,6 +18,7 @@
     "eslint": "^7.6.0",
     "eslint-config-typescript": "^3.0.0",
     "eslint-plugin-typescript": "^0.14.0",
+    "hac-eslint": "git+https://bitbucket.org/nkpgSaberRiders/haceslint.git",
     "tsc-watch": "^4.2.9",
     "typescript": "^3.9.7"
   }
