@@ -19,13 +19,13 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.verifyHash = exports.generateHash = void 0;
+exports.verify = exports.generate = void 0;
 const crypto = __importStar(require("crypto"));
 const DIGEST_ALGORITHM = 'sha512';
 const ITERATIONS = 2048;
 const KEY_LENGTH = 32;
 const SALT_LENGTH = 16;
-exports.generateHash = (password, salt = crypto.randomBytes(SALT_LENGTH).toString('hex'), { digestAlgorithm = DIGEST_ALGORITHM, iterations = ITERATIONS, keyLength = KEY_LENGTH } = {}) => {
+exports.generate = (password, salt = crypto.randomBytes(SALT_LENGTH).toString('hex'), { digestAlgorithm = DIGEST_ALGORITHM, iterations = ITERATIONS, keyLength = KEY_LENGTH } = {}) => {
     return new Promise((resolve, reject) => {
         crypto.pbkdf2(password, salt, iterations, keyLength, digestAlgorithm, (error, key) => {
             if (error) {
@@ -38,9 +38,9 @@ exports.generateHash = (password, salt = crypto.randomBytes(SALT_LENGTH).toStrin
         });
     });
 };
-exports.verifyHash = async (password, hash, options) => {
+exports.verify = async (password, hash, options) => {
     const [salt, oldHashPart] = hash.split('$');
-    const newHash = await exports.generateHash(password, salt, options);
+    const newHash = await exports.generate(password, salt, options);
     const newHashPart = newHash.split('$')[1];
     return newHashPart === oldHashPart;
 };
