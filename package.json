@@ -1,6 +1,6 @@
 {
-  "name": "hac-hash",
-  "version": "0.1.9",
+  "name": "@robinblomberg/hac-hash",
+  "version": "0.2.0",
   "author": "HiQ Ace Creative",
   "main": "./dist/src/index.js",
   "typings": "./src/index.ts",
@@ -12,9 +12,23 @@
     "test-dev": "tsc-watch --project ./tsconfig.test.json --onSuccess \"node ./dist/test/index.js\""
   },
   "devDependencies": {
+    "@robinblomberg/eslint-config-hac-eslint": "^0.3.0",
     "@types/node": "^14.0.27",
-    "eslint-config-hac-eslint": "git+https://bitbucket.org/nkpgSaberRiders/haceslint.git",
     "tsc-watch": "^4.2.9",
     "typescript": "^3.9.7"
-  }
+  },
+  "description": "```\r npm install @robinblomberg/hac-hash\r ```",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobinBlomberg/hac-hash.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RobinBlomberg/hac-hash/issues"
+  },
+  "homepage": "https://github.com/RobinBlomberg/hac-hash#readme"
 }

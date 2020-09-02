@@ -3,7 +3,7 @@
 ## Installation
 
 ```
-npm install https://bitbucket.org/nkpgSaberRiders/hachash
+npm install @robinblomberg/hac-hash
 ```
 
 ## Usage
