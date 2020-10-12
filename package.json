@@ -1,6 +1,6 @@
 {
   "name": "@robinblomberg/hac-hash",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "HiQ Ace Creative",
   "main": "./dist/src/index.js",
   "typings": "./src/index.ts",

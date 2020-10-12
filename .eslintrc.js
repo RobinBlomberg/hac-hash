@@ -1,3 +1,3 @@
 module.exports = {
-  extends: 'hac-eslint'
+  extends: '@robinblomberg/hac-eslint'
 }
